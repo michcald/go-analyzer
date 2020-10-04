@@ -5,9 +5,7 @@ export IMAGE_NAME:=michcald/go-analyzer
 default: login build push logout
 
 login:
-	docker login \
-		--username ${DOCKERHUB_USERNAME} \
-		--password ${DOCKERHUB_PASSWORD}
+	@docker login --username ${DOCKERHUB_USERNAME} --password ${DOCKERHUB_PASSWORD}
 
 build:
 	docker build --rm --no-cache -t ${IMAGE_NAME}:${RELEASE_VERSION} .

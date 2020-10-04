@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      DOCKERHUB_USERNAME: ${{ secrets.ORG_DOCKER_HUB_USERNAME }}
-      DOCKERHUB_PASSWORD: ${{ secrets.ORG_DOCKER_HUB_TOKEN }}
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+      DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_HUB_TOKEN }}
       RELEASE_VERSION: ~
       GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
     steps:
