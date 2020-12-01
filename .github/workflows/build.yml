@@ -21,7 +21,7 @@ jobs:
           docker run --rm -e GITHUB_TOKEN=${GITHUB_TOKEN} -v "${PWD}":/app michcald/semantic-release
           if test -f .RELEASE_VERSION; then
             release_version="$(cat .RELEASE_VERSION)"
-            echo "::set-env name=RELEASE_VERSION::$release_version"
+            echo "RELEASE_VERSION=$release_version" >> $GITHUB_ENV
           fi
       - name: Build and Push
         if: env.RELEASE_VERSION != ''
