@@ -1,4 +1,4 @@
-FROM golangci/golangci-lint:v1.39.0
+FROM golangci/golangci-lint:v1.42.0
 
 WORKDIR /app
 
